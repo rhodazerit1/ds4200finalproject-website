@@ -1,0 +1,41 @@
+<!DOCTYPE html>
+<html>
+<head>
+  <style>
+    #vis.vega-embed {
+      width: 100%;
+      display: flex;
+    }
+
+    #vis.vega-embed details,
+    #vis.vega-embed details summary {
+      position: relative;
+    }
+  </style>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega@5"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-lite@5.16.3"></script>
+  <script type="text/javascript" src="https://cdn.jsdelivr.net/npm/vega-embed@6"></script>
+</head>
+<body>
+  <div id="vis"></div>
+  <script>
+    (function(vegaEmbed) {
+      var spec = {"config": {"view": {"continuousWidth": 300, "continuousHeight": 300}}, "data": {"name": "data-d03206c878e5e37a9c5aba00b6d7e932"}, "mark": {"type": "bar", "color": "darkblue"}, "encoding": {"x": {"field": "SHOOTING_COUNT", "title": "Total Shootings", "type": "quantitative"}, "y": {"field": "DISTRICT_NAME", "sort": "-x", "title": "District", "type": "nominal"}}, "height": 400, "title": "Total Shootings by District 2023", "width": 800, "$schema": "https://vega.github.io/schema/vega-lite/v5.16.3.json", "datasets": {"data-d03206c878e5e37a9c5aba00b6d7e932": [{"DISTRICT_NAME": "Brighton", "SHOOTING_COUNT": 3}, {"DISTRICT_NAME": "Charlestown", "SHOOTING_COUNT": 2}, {"DISTRICT_NAME": "Dorchester", "SHOOTING_COUNT": 32}, {"DISTRICT_NAME": "Downtown", "SHOOTING_COUNT": 5}, {"DISTRICT_NAME": "East Boston", "SHOOTING_COUNT": 5}, {"DISTRICT_NAME": "External", "SHOOTING_COUNT": 0}, {"DISTRICT_NAME": "Hyde Park", "SHOOTING_COUNT": 11}, {"DISTRICT_NAME": "Jamacia Plain", "SHOOTING_COUNT": 18}, {"DISTRICT_NAME": "Mattapan", "SHOOTING_COUNT": 34}, {"DISTRICT_NAME": "Outside of", "SHOOTING_COUNT": 0}, {"DISTRICT_NAME": "Roxbury", "SHOOTING_COUNT": 47}, {"DISTRICT_NAME": "South Boston", "SHOOTING_COUNT": 10}, {"DISTRICT_NAME": "South End", "SHOOTING_COUNT": 14}, {"DISTRICT_NAME": "West Roxbury", "SHOOTING_COUNT": 2}]}};
+      var embedOpt = {"mode": "vega-lite"};
+
+      function showError(el, error){
+          el.innerHTML = ('<div style="color:red;">'
+                          + '<p>JavaScript Error: ' + error.message + '</p>'
+                          + "<p>This usually means there's a typo in your chart specification. "
+                          + "See the javascript console for the full traceback.</p>"
+                          + '</div>');
+          throw error;
+      }
+      const el = document.getElementById('vis');
+      vegaEmbed("#vis", spec, embedOpt)
+        .catch(error => showError(el, error));
+    })(vegaEmbed);
+
+  </script>
+</body>
+</html>

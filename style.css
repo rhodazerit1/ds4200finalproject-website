@@ -1,0 +1,87 @@
+body {
+    width: 1000px;
+    margin: 0 auto;
+    padding: 20px;
+
+
+    background-image: url('FINAL_BACKGROUND_DS42.png');
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
+    background-attachment: fixed;
+}
+
+
+
+h1 {
+    margin: 0;
+    padding: 20px 0;
+    color: rgb(161, 5, 5);
+    text-align: center;
+  }
+
+h3 {
+    margin: 0;
+    padding: 20px 0;
+    color: rgb(161, 5, 5);
+  }
+
+.tg {
+    border-collapse: collapse;
+    border-spacing: 0;
+}
+
+.tg td {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg th {
+    border-color: black;
+    border-style: solid;
+    border-width: 1px;
+    font-family: Arial, sans-serif;
+    font-size: 14px;
+    font-weight: normal;
+    overflow: hidden;
+    padding: 10px 5px;
+    word-break: normal;
+}
+
+.tg .tg-0lax {
+    text-align: left;
+    vertical-align: top;
+}
+
+.center {
+    margin: 0 auto;
+    display: flex;
+    justify-content: center;
+}
+
+.container {
+    align-items: center;
+    display: flex;/* Align items vertically in center */
+}
+
+.image {
+    flex: 0 0 65%; /* Don't allow the image to grow or shrink */
+    margin-right: 20px; /* Add some space between image and text */
+    max-width: 100%;
+    height: auto;
+}
+
+.text {
+    flex: 1; /* Allow text to grow to fill remaining space */
+}
+
+/* Add spacing between the first image div and the following container div */
+.image + .container {
+    margin-top: 30px;  /* Adjust the value as needed to increase or decrease the space */
+}
